@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience The Grand Canyon!</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="cc_7.js" defer></script>
-     <style>
-   
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience The Grand Canyon!</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="cc_7.js" defer></script>
 </head>
 <body>
-  <div class="header">
-    <h2>Canyon Quest Tours</h2>
-  </div>
-  <input type="text" placeholder="Type something here">
-  <button>CLICK</button>
-  <div class="row">
-    <div class="button">Explore</div>
-    <div class="button">Gallery</div>
-    <div class="button">Book Now</div>
-  </div>
 
-
-<div class="sidenav">
-
-</div>
-
-<div class="main">
-  ...
-</div>
+  <header class="header">
+    <h1>Canyon Quest Tours</h1>
     <nav class="Site-Nav" aria-label="primary">
-         <a href="#">About</a>
-         <a href="#">Services</a>
-         <a href="#">Clients</a>
-         <a href="#">Contact</a>
-         <a href="#">Blog</a>      
-         <a href="#">FAQ</a>
-         <a href="#">Book Now</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">FAQ</a>
+      <a href="#">Book Now</a>
     </nav>
-  </div>
-  
-  </div>
-</body>
-</html>
-</head>
-<body>
+  </header>
+
+  <main class="container">
     
+    <!-- quick input (chat-style) -->
+    <div class="messageBox" style="margin:16px 0;">
+      <div class="fileUploadWrapper">
+        <label for="file">
+          <span class="tooltip">Upload</span>
+        </label>
+        <input id="file" type="file" />
+      </div>
+      <input id="messageInput" type="text" placeholder="Type something here" required />
+      <button id="sendButton" aria-label="Send">
+        <span>Send</span>
+      </button>
+    </div>
+
+    <section class="row">
+      <button class="button">TOURS</button>
+      <button class="button">ACTIVITIES</button>
+      <button class="button">GLAMPING</button>
+    </section>
+
+    <section style="margin-top:12px;">
+      <div class="select-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 100 100">
+          <path
+            stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none"
+            d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z">
+          </path>
+        </svg>
+        <select aria-label="Choose a framework">
+          <option>HTML</option>
+          <option>React</option>
+          <option>Vue</option>
+          <option>Angular</option>
+          <option>Svelte</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="section" style="margin-top:16px;">
+      <h2 style="margin-bottom:8px;">Welcome</h2>
+      <p>Experience rim-to-river views, guided hikes, and photo stops—crafted just for you.</p>
+    </section>
+
+    <aside class="section" style="margin-top:16px;">
+      <strong>Side info</strong>
+      <p>Hours, pickup points, weather notes, etc.</p>
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    <div class="company">Canyon Quest Tours</div>
+    <small>&copy; <span id="year"></span> All rights reserved.</small>
+  </footer>
 </body>
 </html>
