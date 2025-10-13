@@ -1,0 +1,149 @@
+:root{
+  --clay:#CB997E;
+  --sand:#DDBEA9;
+  --peach:#FFE8D6;
+  --sage:#B7B7A4;
+  --olive:#A5A58D;
+  --ink:#2F2D2A;
+  --on-dark:#ffffff;
+}
+
+/* reset */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--peach);
+}
+
+/* header */
+.header{
+  background:var(--clay);
+  color:var(--on-dark);
+  padding:30px;
+  text-align:center;
+  font-size:35px;
+  font-weight:bold;
+}
+
+/* nav */
+.Site-Nav{
+  margin-top:12px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+}
+.Site-Nav a{
+  color:var(--on-dark);
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+}
+.Site-Nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-3px;
+  left:0;
+  height:2px;
+  width:0;
+  background:var(--peach);
+  transition:.3s;
+}
+.Site-Nav a:hover::after{width:100%}
+
+/* buttons row */
+.row{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  padding:30px;
+  flex-wrap:wrap;
+}
+.button{
+  flex:1 1 250px;
+  padding:40px 20px;
+  font-size:1.3rem;
+  font-weight:bold;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+  color:var(--ink);
+}
+.row .button:nth-child(1){background:var(--clay);color:var(--on-dark)}
+.row .button:nth-child(2){background:var(--sand)}
+.row .button:nth-child(3){background:var(--sage)}
+.button:hover{transform:translateY(-5px)}
+
+/* footer */
+.footer{
+  background:var(--olive);
+  padding:20px;
+  text-align:center;
+  color:var(--on-dark);
+}
+.footer .company{
+  font-weight:bold;
+  font-size:1.1rem;
+}
+
+/* container wrapper */
+.container{
+  background:var(--peach);
+  max-width:1200px;
+  margin:0 auto;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* chat box */
+.messageBox{
+  display:flex;
+  align-items:center;
+  background:var(--sage);
+  padding:0 15px;
+  height:40px;
+  border-radius:10px;
+}
+.fileUploadWrapper{
+  display:flex;
+  align-items:center;
+}
+#file{display:none}
+.fileUploadWrapper label{
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.tooltip{
+  position:absolute;
+  top:-35px;
+  display:none;
+  background:#000;
+  color:#fff;
+  padding:5px 8px;
+  font-size:.7rem;
+  border-radius:5px;
+}
+.fileUploadWrapper label:hover .tooltip{display:block}
+#messageInput{
+  width:200px;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--on-dark);
+  padding-left:10px;
+}
+#sendButton{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+}
+
+/* responsive */
+@media(max-width:600px){
+  .row{flex-direction:column}
+  .button{width:100%}
+}
