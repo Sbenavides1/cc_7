@@ -11,20 +11,31 @@
 /* reset */
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Montserrat', Arial, sans-serif;
   color:var(--ink);
   background:var(--peach);
   line-height:1.6;
 }
+h1,h2,h3,.header{
+  font-family:'Playfair Display', serif;
+}
 
 /* header */
 .header{
-  background:var(--clay);
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url("images/Grand\ Canyon\ 4K\ backgrond\ top\ pick.jpg") center/cover no-repeat;
   color:var(--on-dark);
-  padding:30px;
+  padding:60px 20px;
   text-align:center;
-  font-size:35px;
+  font-size:38px;
   font-weight:bold;
+  border-bottom:6px solid var(--clay);
+}
+.header h1{
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
 /* nav */
@@ -32,21 +43,33 @@ body{
   margin-top:12px;
   display:flex;
   justify-content:center;
-  gap:14px;
+  gap:8px; /* smaller gap between links and dividers */
   flex-wrap:wrap;
+  font-family:'Montserrat', sans-serif;
+  font-weight:500;
+  font-size:0.95rem; /* smaller font size */
 }
+
 .Site-Nav a{
   color:var(--on-dark);
   text-decoration:none;
-  font-weight:600;
   position:relative;
+  padding:0 4px;
 }
+
 .Site-Nav a::after{
   content:"";
   position:absolute;bottom:-3px;left:0;height:2px;width:0;
   background:var(--peach);transition:.3s;
 }
 .Site-Nav a:hover::after{width:100%}
+
+.Site-Nav .divider{
+  color:var(--peach);
+  opacity:0.8;
+  font-weight:300;
+}
+
 
 /* container */
 .container{
@@ -56,26 +79,38 @@ body{
   padding:20px;
 }
 
-/* chat box */
+/* search bar */
 .messageBox{
-  display:flex;align-items:center;
+  display:flex;
+  align-items:center;
   background:var(--sage);
-  padding:0 15px;height:40px;border-radius:10px;
+  padding:0 10px;
+  height:44px;
+  border-radius:10px;
+  gap:10px;
 }
-.fileUploadWrapper{display:flex;align-items:center}
-#file{display:none}
-.fileUploadWrapper label{
-  cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;
+#sendButton{
+  border:none;
+  background:var(--clay);
+  color:var(--on-dark);
+  font-weight:bold;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+  font-family:'Montserrat', sans-serif;
 }
-.tooltip{
-  position:absolute;top:-35px;display:none;background:#000;color:#fff;
-  padding:5px 8px;font-size:.7rem;border-radius:5px;
-}
-.fileUploadWrapper label:hover .tooltip{display:block}
+#sendButton:hover{background:var(--olive)}
 #messageInput{
-  width:200px;background:transparent;border:none;outline:none;color:var(--on-dark);padding-left:10px;
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--on-dark);
+  padding-left:10px;
+  font-size:1rem;
+  font-family:'Montserrat', sans-serif;
 }
-#sendButton{border:none;background:transparent;cursor:pointer}
 
 /* row of buttons */
 .row{
@@ -85,8 +120,6 @@ body{
   padding:30px 0;
   flex-wrap:wrap;
 }
-
-/* image-card buttons */
 .button{
   position:relative;
   flex:1 1 250px;
@@ -100,6 +133,7 @@ body{
   text-shadow:0 2px 6px rgba(0,0,0,.65);
   cursor:pointer;
   transition:transform .3s, box-shadow .3s;
+  font-family:'Montserrat', sans-serif;
 }
 .button img{
   position:absolute;inset:0;
@@ -107,7 +141,7 @@ body{
   object-fit:cover;
   z-index:0;
 }
-.button span{z-index:1;position:relative}
+.button span{z-index:2;position:relative}
 .button::after{
   content:"";
   position:absolute;inset:0;
@@ -121,7 +155,7 @@ body{
 
 /* palette borders */
 .row .button:nth-child(1){border-color:var(--clay)}
-.row .button:nth-child(2){border-color:var(--sand);color:var(--ink);text-shadow:none}
+.row .button:nth-child(2){border-color:var(--sand);color:var(--on-dark);text-shadow:0 2px 6px rgba(0,0,0,.65)}
 .row .button:nth-child(3){border-color:var(--sage)}
 
 /* section + aside */
@@ -139,6 +173,7 @@ body{
   padding:22px;
   text-align:center;
   color:var(--on-dark);
+  font-family:'Montserrat', sans-serif;
 }
 .footer .company{font-weight:bold;font-size:1.1rem}
 

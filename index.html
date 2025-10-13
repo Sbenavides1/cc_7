@@ -6,44 +6,54 @@
   <title>Experience The Grand Canyon!</title>
   <link rel="stylesheet" href="style.css"/>
   <script src="cc_7.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header class="header">
     <h1>Canyon Quest Tours</h1>
-    <nav class="Site-Nav" aria-label="primary">
-      <a href="#">| About |</a>
-      <a href="#">| Services |</a>
-      <a href="#">| Clients |</a>
-      <a href="#">| Contact |</a>
-      <a href="#">| Blog |</a>
-      <a href="#">| FAQ |</a>
-      <a href="#">| Book Now |</a>
-    </nav>
+<nav class="Site-Nav" aria-label="primary">
+  <a href="#">About</a>
+  <span class="divider">||</span>
+  <a href="#">Services</a>
+  <span class="divider">||</span>
+  <a href="#">Clients</a>
+  <span class="divider">||</span>
+  <a href="#">Contact</a>
+  <span class="divider">||</span>
+  <a href="#">Blog</a>
+  <span class="divider">||</span>
+  <a href="#">FAQ</a>
+  <span class="divider">||</span>
+  <a href="#">Book Now</a>
+</nav>
   </header>
 
   <main class="container">
-    
-    <!-- quick input (chat-style) -->
+
     <div class="messageBox" style="margin:16px 0;">
-      <div class="fileUploadWrapper">
-        <label for="file">
-          <span class="tooltip">Upload</span>
-        </label>
-        <input id="file" type="file" />
-      </div>
       <input id="messageInput" type="text" placeholder="Type something here" required />
       <button id="sendButton" aria-label="Send">
         <span>Send</span>
       </button>
     </div>
 
-
-<section class="row">
-  <button class="button"><img src="images/GrandCanyon Tour Image.jpg" alt=""><span>TOURS</span></button>
-  <button class="button"><img src="images/Grand Canyon River Pic.jpg" alt=""><span>ACTIVITIES</span></button>
-  <button class="button"><img src="images/Glamping in GRand Canyon.jpg" alt=""><span>GLAMPING</span></button>
-</section>
+    <section class="row">
+      <button class="button">
+        <img src="images/GrandCanyon Tour Image.jpg" alt="Tours">
+        <span>TOURS</span>
+      </button>
+      <button class="button">
+        <img src="images/Grand Canyon River Pic.jpg" alt="Activities">
+        <span>ACTIVITIES</span>
+      </button>
+      <button class="button">
+        <img src="images/Glamping in GRand Canyon.jpg" alt="Glamping">
+        <span>GLAMPING</span>
+      </button>
+    </section>
 
     <section class="section" style="margin-top:16px;">
       <h2 style="margin-bottom:8px;">Welcome</h2>
@@ -67,4 +77,3 @@
   </script>
 </body>
 </html>
-
