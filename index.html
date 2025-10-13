@@ -38,29 +38,20 @@
       </button>
     </div>
 
-    <section class="row">
-      <button class="button">TOURS</button>
-      <button class="button">ACTIVITIES</button>
-      <button class="button">GLAMPING</button>
-    </section>
-
-    <section style="margin-top:12px;">
-      <div class="select-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 100 100">
-          <path
-            stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none"
-            d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z">
-          </path>
-        </svg>
-        <select aria-label="Choose a framework">
-          <option>HTML</option>
-          <option>React</option>
-          <option>Vue</option>
-          <option>Angular</option>
-          <option>Svelte</option>
-        </select>
-      </div>
-    </section>
+  <section class="row">
+  <button class="button">
+    <img src="images/GrandCanyon Tour Image.jpg" alt="Tours">
+    <span>TOURS</span>
+  </button>
+  <button class="button">
+    <img src="images/Grand Canyon River Pic.jpg" alt="Activities">
+    <span>ACTIVITIES</span>
+  </button>
+  <button class="button">
+    <img src="images/Glamping in GRand Canyon.jpg" alt="Glamping">
+    <span>GLAMPING</span>
+  </button>
+</section>
 
     <section class="section" style="margin-top:16px;">
       <h2 style="margin-bottom:8px;">Welcome</h2>
@@ -68,7 +59,7 @@
     </section>
 
     <aside class="section" style="margin-top:16px;">
-      <strong>Side info</strong>
+      <h3>Additional Info</h3>
       <p>Hours, pickup points, weather notes, etc.</p>
     </aside>
 
@@ -78,5 +69,10 @@
     <div class="company">Canyon Quest Tours</div>
     <small>&copy; <span id="year"></span> All rights reserved.</small>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
